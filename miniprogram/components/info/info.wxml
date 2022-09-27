@@ -1,0 +1,40 @@
+<!--components/info.wxml-->
+<view class="container">
+<view class="birth">
+    <view class="title">
+      <image class="star" src="../../asset/star.png"></image>
+      Birth
+    </view>
+    <!-- <view wx:if="!{{eggJK.length}}&&{{eggHK.length}}&&{{eggZZ.length}}">
+    <view class="todos">
+    <view class="event">
+    还没开始！别急！
+    </view>
+    </view> </view> -->
+    <view class="todos">
+      <view class="event" wx:if="{{eggJK.length}}">【JK】{{eggJK.length}}蛋 {{eggJKF.length}}受精 {{eggJKH.length}}出壳</view>
+    </view>
+    <view class="todos" wx:if="{{eggHK.length}}">
+      <view class="event">【HK】{{eggHK.length}}蛋 {{eggHKF.length}}受精 {{eggHKH.length}}出壳</view>
+    </view>
+    <view class="todos" wx:if="{{eggZZ.length}}">
+      <view class="event">【ZZ】{{eggZZ.length}}蛋 {{eggZZF.length}}受精 {{eggZZH.length}}出壳</view>
+    </view>
+ 
+  </view>
+
+  <view class="death">
+    <view class="title">
+      <image class="star" src="../../asset/star.png"></image>
+      Death
+    </view>
+    <view class="todos">
+      <view class="event" wx:if="{{dJK}}">【JK】{{dJK}}只</view>
+      <view class="event" wx:if="{{dHK}}">【HK】{{dHK}}只</view>
+      <view class="event" wx:if="{{dZZ}}">【ZZ】{{dZZ}}只</view>
+      <view class="event" wx:if="!{{dJK}}&&{{dHK}}&&{{dZZ}}">没有！都活着！哈哈！</view>
+      
+    </view>
+  
+  </view>
+</view>

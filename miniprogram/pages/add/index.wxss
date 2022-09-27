@@ -1,0 +1,115 @@
+/**index.wxss**/
+page{
+  /* background: linear-gradient(90deg,#E2CBD3, #91D0D7) ; */
+  
+}
+.container{
+  width: 95%;
+  margin: 30rpx auto;
+  border-radius: 25rpx;
+  /* background: linear-gradient(#E2CBD3, #91D0D7); */
+  overflow: hidden;
+  /* font-size: 28rpx; */
+}
+.title{
+  margin-top: 30rpx;
+  /* font-size: 28rpx; */
+  color: #01383f;
+
+}
+.page-body{
+margin: 30rpx;
+}
+.section{
+/* font-size: 28rpx; */
+margin: 20rpx;
+padding-bottom: 10rpx;
+/* border-bottom: gray 1rpx solid; */
+}
+.picker{
+display: flex;
+}
+.input-area{
+  margin: 20rpx;
+  display: flex;
+  /* font-size: 28rpx; */
+}
+.input-area .name{
+  display: flex;
+  
+  flex-wrap: nowrap;
+  
+}
+.input-area .input {
+  display: flex;
+  width: 60%;
+  margin-left: 10rpx;
+  /* font-size: 28rpx; */
+  border: 1px dotted rgb(58, 58, 58);
+  padding-left: 5rpx;
+  border-radius: 20rpx;
+}
+.species{
+  margin: 20rpx;
+  /* font-size: 28rpx; */
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: center; */
+  vertical-align: center;
+  align-items: center;
+}
+.species .hint {
+  display: flex;
+  margin-bottom: 20rpx;
+  margin-right: 10rpx;
+}
+.species .radio-group{
+  display: flex;
+  width: 75%;
+  
+}
+.species .radio-group .label{
+margin-right: 20rpx;
+}
+.species .radio-group .radio{
+  
+  
+}
+.section1{
+  margin: 20rpx;
+  flex-flow: row nowrap;
+  /* vertical-align: middle; */
+  justify-content: center;
+}
+.section1 .section__title{
+  display: flex;
+  width: 30%;
+}
+.section1 .picker1{
+display: flex;
+width: 30%;
+}
+.page-section{
+  margin: 20rpx;
+}
+.page-section-title{
+  display: flex;
+  justify-content: center;
+}
+.weui-input{
+  min-height: 100rpx;
+  height: auto;
+  border: 1rpx dotted gray;
+  background-color: rgb(240, 255, 240,0.3);
+  border-radius:20rpx ;
+  padding:10rpx;
+}
+.map {
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.map .pic{
+width: 500rpx;
+}
+
+

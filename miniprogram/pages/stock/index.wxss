@@ -1,0 +1,83 @@
+/* pages/stock/index.wxss */
+.stock{
+  width: 90%;
+  margin: 30rpx auto;
+  border-radius: 25rpx;
+  overflow: hidden;
+}
+.table {
+  border: 0px solid darkgray;
+ }
+ .tr {
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+  flex-flow: row nowrap;
+  height: 3rem;
+  align-items: center;
+  font-size: 25rpx;
+ }
+ .td {
+  width:40%;
+  justify-content: center;
+  text-align: center;
+ }
+ .bg{
+  background: #e4e2f3;
+ }
+ .bw{
+  background:snow;
+ }
+ .th {
+  /* width: 40%; */
+  flex: 1;
+  justify-content: center;
+  background: #7e74da;
+  color: #fff;
+  font-size: 25rpx;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+ }
+.plus-min{
+  width: 40rpx;
+  height: 40rpx;
+}
+ .add {
+display:flex;
+ }
+ .stockNumber{
+   color: #d8b000;
+ }
+ .title{
+  /* flex-flow: column nowrap;
+  justify-content: center; */
+  align-items: center; 
+  text-align: center;
+  vertical-align:middle ;
+ }
+ .plus {
+/* margin: auto; */
+margin-top: 10rpx;
+   display: inline-flex; 
+  width: 41rpx;
+  height: 41rpx;
+  /* margin-right: 20rpx; */
+}
+.addnew{
+  display: flex;
+  width: 100%; 
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  font-size: 25rpx;
+}
+.text{
+    display: inline-flex;
+width: 16.6%;
+  justify-content: center;
+  text-align: center;
+}
+
+
+

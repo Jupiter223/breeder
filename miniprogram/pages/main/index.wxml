@@ -1,0 +1,36 @@
+<view class="container">
+<view class="calendar">
+<Calendar id="Calendar" bind:select="select" mu="{{mu}}"></Calendar>
+</view>
+
+<view class="add">
+<view class="choice">
+    <navigator  class="join" url="/pages/add/index">
+    <image class="pic" src="../../asset/egg5.png"></image>
+    <text class="word">记录下蛋</text>
+    </navigator>
+  </view>
+  <view class="choice">
+    <navigator  class="join" url="/pages/add/index2">
+      <image class="pic" src="../../asset/hatch.png"></image>
+    <text class="word">记录出壳</text>
+        </navigator>
+  </view>
+  <view class="choice">
+    <navigator  class="join" url="/pages/add/index3">
+      <image class="pic" src="../../asset/death.png"></image>
+    <text class="word">记录死亡</text>
+        </navigator>
+  </view>
+</view>
+<view class="add">
+  <view class="choice">
+    <navigator  class="join" url="/pages/add/index1">
+      <image class="pic1" src="../../asset/calendar.png"></image>
+    <text class="word">日历记录</text>
+    </navigator>
+  </view>
+</view>
+
+</view>
+

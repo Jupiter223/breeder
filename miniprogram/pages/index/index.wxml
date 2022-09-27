@@ -1,0 +1,68 @@
+<!--pages/index/index.wxml-->
+
+<view class="container">
+  <view class="top">
+    <weather></weather>
+  </view>
+  <view class="middle">
+    <view class="links" bindtap="toLocation">
+      <image class="icon" src="../../asset/location1.png"></image>
+      <text class="word">位置</text>
+    </view>
+    <view class="links" bindtap="addEgg">
+      <image class="icon" src="../../asset/egg1.png"></image>
+      <text class="word">下蛋</text>
+    </view>
+    <!-- <view class="links">
+      <image class="icon" src="../../asset/parrot.png"></image>
+      <text class="word">增加新鸟</text>
+    </view> -->
+    <view class="links" bindtap="addNestling">
+      <image class="icon" src="../../asset/egg3.png"></image>
+      <text class="word">出壳</text>
+    </view>
+    <view class="links" bindtap="checkStock">
+      <image class="icon" src="../../asset/stock.png"></image>
+      <text class="word">粮食</text>
+    </view>
+  </view>
+  <!-- 显示todos -->
+  <view class="middle2">
+    <view class="title">
+      <image class="star" src="../../asset/star.png"></image>
+      Todos
+    </view>
+    <block wx:if="{{todos.length}}">
+      <view class="todos" wx:for="{{todos}}" wx:key="index">
+
+        <view class="event">{{item.name}}</view>
+        <view class="event">{{item.startTime}}</view>
+      </view>
+    </block>
+    <block wx:if="{{!todos.length}}">
+      <view class="todos">
+        <view class="event">恭喜！没有待办事项！快乐！</view>
+      </view>
+    </block>
+  </view>
+  <!-- 使用说明 -->
+  <view class="middle2">
+    <view class="title">
+      <image class="star" src="../../asset/star.png"></image>
+      说明
+    </view>
+    <view class="direction">
+      <view class="event">记录新蛋：首页【下蛋】、日历页【记录下蛋】</view>
+      <view class="event">记录新出壳：首页【出壳】、日历页【记录出壳】</view>
+      <view class="event">添加受精、出壳标记：查询页-查询蛋/查询雏鸟-编辑</view>
+      <view class="event">添加其他事件：日历页【日历记录】</view>
+      <view class="event">查看粮食库存：首页【粮食】</view>
+      <view class="event">添加待办事项：Todos</view>
+      
+    </view>
+  </view>
+  <!-- 显示实时蛋况 -->
+  <view class="info">
+    <info></info>
+  </view>
+</view>

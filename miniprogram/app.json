@@ -1,0 +1,67 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/main/index",
+    "pages/search/index",
+    "pages/add/index",
+    "pages/add/index1",
+    "pages/add/index2",
+    "pages/add/index3",
+    "pages/stock/index",
+    "pages/edit/index",
+    "pages/edit/index1",
+    "pages/todos/index",
+    "pages/location/index"
+    
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "嗷嗷待哺",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于天气预报定位" 
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  
+    "tabBar": {
+      "color": "#999",
+      "selectedColor": "#222",
+      "backgroundColor": "#f8f9fb",
+      "borderStyle": "white",
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath":"asset/tabber/home.png",
+        "selectedIconPath":"asset/tabber/home-active.png"
+      },
+        {
+        "pagePath": "pages/main/index",
+        "text": "日历",
+        "iconPath":"asset/tabber/calendar.png",
+        "selectedIconPath":"asset/tabber/calendar-active.png"
+      },  {
+        "pagePath": "pages/search/index",
+        "text": "查询",
+        "iconPath":"asset/tabber/search.png",
+        "selectedIconPath":"asset/tabber/search-active.png"
+      },  {
+        "pagePath": "pages/todos/index",
+        "text": "Todos",
+        "iconPath":"asset/tabber/todos.png",
+        "selectedIconPath":"asset/tabber/todos-active.png"
+      }]
+    }
+    
+  
+  
+}

@@ -1,0 +1,37 @@
+<!--pages/todos/index.wxml-->
+
+<view class="container">
+  <view class="header">
+    <image class="plus" src="../../asset/plus.png"/>
+    <input class="new-todo" value="{{ input }}" placeholder="添加..."  bindinput="inputChangeHandle" bindconfirm="addTodoHandle"/>
+  </view>
+  <block wx:if="{{ todos.length }}">
+    <view class="todos">
+      <!-- List items should get the class `completed` when marked as completed -->
+      <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="index" bindtap="toggleTodoHandle" data-index="{{index}}" data-id="{{item._id}}">
+        <!-- completed: success, todo: circle -->
+        <icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}"/>
+        <text class="name">{{ item.name }}</text>
+        <text class="time">{{item.startTime}}</text>
+        <!-- <icon class="remove" type="clear" size="16" catchtap="removeTodoHandle" data-index="{{index}}"/> -->
+      </view>
+    </view>
+    <view class="footer">
+      <text class="btn" bindtap="toggleAllHandle">全选</text>
+      <text class="btn" bindtap="clearCompletedHandle">清除已完成</text>
+    </view>
+  </block>
+  <!-- <block wx:else>
+    <view class="empty">
+      <text class="title">Congratulations!</text>
+      <text class="content">已完成所有任务</text>
+    </view>
+  </block> -->
+  <view class='deleted'>
+  <view class="item" wx:for="{{completedItem}}" wx:key="index">
+  <view class="name">{{item.name}}
+  </view>
+  <view class="time">已完成于{{item.finishiTime}}</view>
+  </view>
+  </view>
+</view>

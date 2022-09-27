@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "weather": "../../components/weather/weather",
+    
+    "info":"../../components/info/info"
+  }
+}

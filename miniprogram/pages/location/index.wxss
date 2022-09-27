@@ -1,0 +1,4 @@
+/* pages/location/index.wxss */
+.title {
+  margin: 30rpx;
+}

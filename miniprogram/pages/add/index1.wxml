@@ -1,0 +1,39 @@
+<!-- 日历事件记录页 -->
+<view class="container">
+  <view class="title">事件记录</view>
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <!-- 选择日期 -->
+      <view class="section">
+        
+        <picker mode="date" name="date" value="{{date}}" start="2015-01-01" end="2030-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            日期: {{date}}
+          </view>
+        </picker>
+      </view>
+      <!-- 输入日历事项 -->
+      <view class="page-section-title">标题</view>
+      <input class="input" type="text" placeholder="事件标题" name="title" />
+
+
+
+      <view class="page-section">
+        <view class="page-section-title">内容</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0">
+              <input class="weui-input" name="content" placeholder="具体内容" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: auto;width: 250rpx;background-color: cadetblue;" type="primary" formType="submit">提交</button>
+        <button style="margin: 20rpx auto;width: 250rpx;background-color: cadetblue;color: ivory;" formType="reset">Reset</button>
+      </view>
+    </form>
+  </view>
+
+</view>

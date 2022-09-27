@@ -1,0 +1,61 @@
+<view class='calendar'>
+  <!--显示当前年月日-->
+  <view class='calendar-title'>
+    <view class='item ctrl' bindtap='lastMonth'>{{lastMonth}}</view>
+    <view class='item title'>{{title}}</view>
+    <view class='item ctrl' bindtap='nextMonth'>{{nextMonth}}</view>
+    <view class='item ctrl today' bindtap='today'>今天</view>
+  </view>
+
+  <!-- ============滚动展示============  -->
+  <view hidden="{{ toggleType == 'large' }}">
+    <scroll-view scroll-left="{{scrollLeft}}" scroll-x scroll-with-animation class="calendar-x">
+      <view class='grid' wx:for='{{thisMonthDays}}' wx:key='inedx'>
+        <view class='self' wx:if="{{ format === year+'-'+item.monthFormat+'-'+item.dateFormat }}"></view>
+        <view class="wrap {{ select === year+'-'+item.monthFormat+'-'+item.dateFormat ? 'select' :''}}" bindtap='select' data-date='{{item.date}}'>
+          <view>{{item.date}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- ============平铺展示============  -->
+  <!--遍历星期-->
+  <view class='calendar-week' hidden="{{ toggleType == 'mini' }}">
+    <view wx:for='{{weekText}}' class='item' wx:key='item'>{{item}}</view>
+  </view>
+
+  <view class='calendar-container' hidden="{{ toggleType == 'mini' }}">
+    <!--上个月占位格子-->
+    <view class='grid gray' wx:for='{{empytGridsBefore}}' wx:key='item'>{{item}}</view>
+
+    <!--当月格子-->
+    <view class='grid' wx:for='{{thisMonthDays}}' wx:key='index'>
+      <view class='self' wx:if="{{ format === year+'-'+item.monthFormat+'-'+item.dateFormat }}"></view>
+      <view class="wrap {{ select === year+'-'+item.monthFormat+'-'+item.dateFormat ? 'select' :''}}" bindtap='select' data-date='{{item.date}}' style="width: 97rpx; height: 145rpx; display: block; box-sizing: border-box">
+        <view>{{item.date}}</view>
+
+        <view class="dateOne" wx:for='{{mu}}' wx:key="idx" wx:for-item="muu">
+          <view class="date-event {{ select === year+'-'+item.monthFormat+'-'+item.dateFormat ? 'select' :''}}" wx:if="{{year+'-'+item.monthFormat+'-'+item.dateFormat===muu.date}}" bindtap="clickCard">{{muu.title}}</view>
+        </view>
+      </view>
+
+    </view>
+
+    <!--下个月占位格子-->
+    <view class='grid gray' wx:for='{{empytGridsAfter}}' wx:key='item'>{{item}}</view>
+  </view>
+
+  <!-- 选中下方显示当日日程 -->
+
+  <view class="calendar-card" hidden="{{ toggleType == 'large' }}" bindtap="toggleType">
+    <view class="selected-date">{{select}}</view>
+    <view class="warn">注：点击删除相应日历事件</view>
+    <view class="calendar-event" wx:for='{{mu}}' wx:key="idx" wx:for-item="muu">
+      <view class="event-large" wx:if="{{select===muu.date}}" data-id="{{muu._id}}" bindtap="clickEvent">
+        {{muu.title}}
+        <!-- <button size="mini" style="margin-left:50rpx;font-weight: 400;line-height: 100%;font-size:30rpx;color: gray;" bindtap="delete">删除</button> -->
+      </view>
+    </view>
+  </view>
+</view>

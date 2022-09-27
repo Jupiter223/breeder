@@ -1,0 +1,6 @@
+<!--pages/location/index.wxml-->
+<view class="container">
+<view class="title">
+位置图</view>
+<image class="pic" src='{{imgUrl}}' bindtap='previewImage'mode="widthFix"></image>
+</view>

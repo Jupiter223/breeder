@@ -1,0 +1,39 @@
+/**index.wxss**/
+.calendar {
+  width: 95%;
+  margin: 30rpx auto;
+  border-radius: 25rpx;
+  overflow: hidden;
+}
+.add{
+  display: flex;
+  margin-left: -20rpx;
+}
+.add .choice{
+  display: flex;
+  margin: 10rpx;
+  text-align: center;
+  line-height: 100%;
+  flex-direction: column;
+}
+.pic {
+    width: 80rpx;
+  height: 80rpx;
+}
+.pic1 {
+  /* margin: 15rpx; */
+  /* padding: 15rpx; */
+  padding-left: 15rpx;
+  padding-top: 15rpx;
+  padding-right: 15rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.join{
+  display: flex;
+}
+.word {
+  display: flex;
+  color: #0069a7;
+  align-items: center;
+}

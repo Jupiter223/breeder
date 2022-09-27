@@ -1,0 +1,78 @@
+<!--pages/stock/index.wxml-->
+<view class="stock">
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">类别</view>
+ <view class="th">名称</view>
+ <view class="th">规格</view>
+ <view class="th ">单价</view>
+ <view class="th ">剩余数量</view>
+ <view class="th ">盘点</view>
+ 
+</view>
+<block wx:for="{{stockItem}}" wx:key="index">
+ <view class="tr bw" wx:if="{{index % 2 == 0}}">
+ <view class="td">{{item.category}}</view>
+ <view class="td">{{item.feed}}</view>
+ <view class="td">{{item.specification}}</view>
+ <view class="td">{{item.unitPrice}}</view>
+ <view class="td" wx:if="{{!isShowInput}}">{{item.quantity}}</view>
+ <view class="td" wx:if="{{isShowInput}}"  >
+ <input class="stockNumber" type="number" value="{{item.quantity}}" data-id="{{item._id}}" autofocus="true" bindblur="blur" bindinput="bindKeyInput" />
+ </view>
+ <view class="td" bindtap="checkStock" focus data-id="{{item._id}}">
+ <image class="plus-min" src="../../asset/plus-min.png"></image>
+ </view>
+ 
+ </view>
+ <view class="tr bg" wx:else>
+  <view class="td">{{item.category}}</view>
+ <view class="td">{{item.feed}}</view>
+ <view class="td">{{item.specification}}</view>
+ <view class="td">{{item.unitPrice}}</view>
+ <view class="td" wx:if="{{!isShowInput}}">{{item.quantity}}</view>
+ <view class="td" wx:if="{{isShowInput}}" >
+ <input class="stockNumber" type="number" value="{{item.quantity}}" data-id="{{item._id}}" bindblur="blur" bindinput="bindKeyInput" />
+ </view>
+ <view class="td" bindtap="checkStock" focus data-id="{{item._id}}">盘点</view>
+
+ </view>
+ </block>
+
+
+ </view> 
+</view>
+ <!-- <view bindtap="checkStock">盘点</view> -->
+ <view class="stock">
+ <view class="title" bindtap="addStockItem">
+ <image class="plus" src="../../asset/plus2.png" />
+<view>新增品类</view>
+ </view>
+</view>
+ <block wx:if="{{addIsShow}}">
+ <view class="stock">
+  <view class="tr bg-w ">
+ <view class="th">类别</view>
+ <view class="th">名称</view>
+ <view class="th">规格</view>
+ <view class="th ">单价</view>
+ <view class="th ">剩余数量</view>
+ <view class="th ">盘点</view>
+ </view>
+
+ <view class="addnew">
+ 
+ <form catchsubmit="formSubmit">
+ 
+ <input class="text" type="text" name="category" placeholder="类别"/>
+ <input class="text" type="text"  name="feed" placeholder="名称"/>
+ <input class="text" type="text"  name="specification" placeholder="规格"/>
+ <input class="text" type="text"  name="unitPrice" placeholder="单价"/>
+ <input class="text" type="text"  name="quantity" placeholder="数量"/>
+
+ <button type="default" form-type="submit" size="mini" style="width: 16%;font-size: 25rpx;margin: auto;color: #7e74da;line-height: 100%;margin-left: 7rpx;">确定</button>
+</form>
+ 
+</view>
+</view>
+</block>

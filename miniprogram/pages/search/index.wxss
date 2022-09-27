@@ -1,0 +1,93 @@
+/* pages/search/index.wxss */
+.card {
+  margin-top: 30rpx;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  /* background: linear-gradient(#fffefe,#f0e8d3); */
+  border-radius: 25rpx;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+.card .head{
+  margin: 10rpx;
+  display: flex;
+  color: cadetblue;
+  font-weight: 700;
+   justify-content: center;
+  align-items: center;
+ 
+}
+.card .input-area{
+  display: flex;
+  
+  flex-flow: row nowrap;
+}
+.name{
+  padding-left: 15rpx;
+  display: inline-flex;
+}
+.input{
+  display: inline-flex;
+  /* width: 60%; */
+  margin: 10rpx;
+ 
+  border: 1px dotted rgb(58, 58, 58);
+  padding-left: 10rpx;
+  border-radius: 20rpx;
+}
+.botton{
+    display: flex;
+    margin: auto;
+    flex-flow: row nowrap;
+    justify-items: center;
+    align-items: center;
+    
+}
+.word {
+  margin: 0 15rpx 15rpx 15rpx;
+}
+
+.result {
+width: 90%;
+margin: 30rpx auto;
+border-radius: 25rpx;
+overflow: hidden;
+}
+.table {
+border: 0px solid darkgray;
+}
+.tr {
+display: flex;
+/* width: 100%; */
+justify-content: center;
+flex-flow: row nowrap;
+height: 3rem;
+align-items: center;
+font-size: 25rpx;
+}
+.td {
+width:40%;
+justify-content: center;
+text-align: center;
+}
+.bg{
+background: rgb(215, 230, 230);
+}
+.bw{
+background:snow;
+}
+.th {
+/* width: 40%; */
+flex: 1;
+justify-content: center;
+background: cadetblue;
+color: #fff;
+font-size: 25rpx;
+display: flex;
+height: 3rem;
+align-items: center;
+}
+ 

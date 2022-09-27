@@ -1,0 +1,75 @@
+
+<view class="container">
+  <view class="title">记录出壳</view>
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <!-- 选择日期 -->
+      <view class="section">
+     
+      </view>
+      <!-- 输入位置编号 -->
+      <view class="input-area">
+      <view class="name">位置编号:</view>
+      <input class="input" type="text" value="{{editInfo.birdLocation}}" placeholder="输入位置编号" name="birdLocation" />
+</view>
+      <!-- <view class="page-section page-section-gap">
+        <view class="page-section-title">种类</view>
+        <radio-group name="species">
+          <label>
+            <radio value="JK" />JK
+          </label>
+          <label>
+            <radio value="HK" />HK
+          </label>
+          <label>
+            <radio value="YMX" />YMX
+          </label>
+          <label>
+            <radio value="ZZ" />ZZ
+          </label>
+          <label>
+            <radio value="XM" />XM
+          </label>
+          <label>
+            <radio value="HWJ" />HWJ
+          </label>
+          <label>
+            <radio value="LY" />LY
+          </label>
+        </radio-group>
+      </view> -->
+      <view class="section">
+        <view class="section__title">蛋编号</view>
+        <picker name="nest" bindchange="bindPickerChange1" value="{{countNest}}" range="{{array1}}">
+          <view class="picker">
+            第{{countNest}}窝
+          </view>
+        </picker>
+        <picker name="child" bindchange="bindPickerChange2" value="{{countNest}}" range="{{array2}}">
+          <view class="picker">
+            第{{countNest}}个
+          </view>
+        </picker>
+      </view>
+      <view class="body-view">死亡
+                <switch name="death" checked="{{editInfo.death}}" bindchange="switch1Change"/>
+            </view>
+      <view class="page-section">
+        <view class="page-section-title">内容</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0">
+              <input class="weui-input" name="content" placeholder="输入备注" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: auto;width: 250rpx;background-color: cadetblue;" type="primary" formType="submit">修改</button>
+        
+      </view>
+    </form>
+  </view>
+
+</view>
